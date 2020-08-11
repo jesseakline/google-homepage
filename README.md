@@ -1,1 +1,1 @@
-# google-homepage
+# This project is an attempt to rebuild the google homepage from scratch for practice.
