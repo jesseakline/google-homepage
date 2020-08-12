@@ -2,48 +2,102 @@
 <html>
  <head>
     <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav {
+            display: block;
+        }
         ul {
             list-style-type: none;
-            margin: 10px;
-            padding: 10px;
+            margin: 0;
+            padding: 0;
         }
         li {
             float: left;
+            overflow: auto;
+            display: block;
+            font-size: 12px;
+            padding:5px;
+            margin: 10px;
         }
-        .nav-right {
+        a:link {
+            color:black;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .searchbar {
+            border: 1px solid #e3e3e3;
+            border-radius: 30px;
+            width: 500px;
+            font-size: 14px;
+            padding: 10px 20px; 
+        }
+        .searchbar:hover {
+            box-shadow: 2px 2px #e3e3e3;
+        }
+        .button {
+            background-color:#f0f0f0;
+            border: solid transparent;
+            border-width: 1px;
+            border-radius: 3px;
+            font-size: 14px;
+            padding: 5px 15px;
+        }
+        .button:hover {
+            border: solid;
+            border-width: 1px;
+            border-color: #bebebe;
+        }
+        .float-right {
             float: right;
+        }
+        #fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        #fixed-bottom {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
  </head>
     <nav>
-        <ul>
+        <ul id="fixed-top">
         <li><a href="about.html">About</a></li>
         <li><a href="store.html">Store</a></li>
-        <li class="nav-right"><a href="gmail.html">Gmail</a></li>
-        <li class="nav-right"><a href="images.html">Images</a></li>
-        <li class="nav-right"><a href="google-apps">Google Apps</a></li>
-        <li class="nav-right"><a href="account">Google Account</a></li>
+        <li class="float-right"><a href="account"><img src="profile.png"></a></li>
+        <li class="float-right"><a href="google-apps">Google Apps</a></li>
+        <li class="float-right"><a href="images.html">Images</a></li>
+        <li class="float-right"><a href="gmail.html">Gmail</a></li>
         </ul>
     </nav>
 <body>
     <br>
     <center>
+        <div style="height: 150px"></div>
         <div><img src="googlelogo_color.png" alt="Google Logo"></div>
-        <div><input type="search" id="searchbar"></div>
+        <br>
+        <div style="height: 50px "><input class="searchbar" type="search" id="searchbar"></div>
+        <br>
         <div>
-            <button type="button">Google Search</button>
-            <button type="button">I'm Feeling Lucky</button>
+            <button class="button" type="button">Google Search</button>
+            <button class="button" type="button">I'm Feeling Lucky</button>
         </div>
-    </center>
+     </center>
 </body>
-    <nav>
-        <ul>
+   <nav>
+        <ul id="fixed-bottom" style="background-color:#f0f0f0;">
         <li><a href="advertising.html">Advertising</a></li>
         <li><a href="business.html">Business</a></li>
         <li><a href="how-search-works.html">How Search Works</a></li>
-        <li class="nav-right"><a href="privacy.html">Privacy</a></li>
-        <li class="nav-right"><a href="terms.html">Terms</a></li>
-        <li class="nav-right"><a href="settings">Settings</a></li>
+        <li class="float-right"><a href="settings">Settings</a></li>
+        <li class="float-right"><a href="terms.html">Terms</a></li>
+        <li class="float-right"><a href="privacy.html">Privacy</a></li>
         </ul>
     </nav>
 </html>
